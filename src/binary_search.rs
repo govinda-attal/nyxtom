@@ -1,10 +1,6 @@
 use std::cmp;
 
-fn find(nums: &[u32], n: u32) -> Option<usize> {
-    if nums.is_empty() {
-        return None;
-    }
-
+fn find<T: Ord>(nums: &[T], n: T) -> Option<usize> {
     let mut l = 0;
     let mut r = nums.len();
 
